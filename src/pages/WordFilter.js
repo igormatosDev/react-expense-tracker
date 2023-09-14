@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+
+import { Header } from "../components/Header";
+import WordFilterForm from "../components/WordFilterForm";
 
 const WordFilter = () => {
   return (
-    <div>WordFilter</div>
-  )
-}
+    <>
+      <Header title={"Word filter"} />
+      <WordFilterForm />
+    </>
+  );
+};
 
-export default WordFilter
+export default WordFilter;

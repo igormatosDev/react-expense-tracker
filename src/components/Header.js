@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Header = () => {
+export const Header = (props) => {
   return (
-    <h2>Expense tracker</h2>
+    <h2>{props.title}</h2>
   )
 }

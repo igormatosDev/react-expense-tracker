@@ -10,7 +10,7 @@ import { AddTransaction } from '../components/AddTransaction'
 const ExpenseTracker = () => {
     return (
         <>
-            <Header />
+            <Header title="Expense Tracker" />
             <Balance />
             <IncomeExpenses />
             <TransactionList />

@@ -1,4 +1,4 @@
-const motivationalSentences = [
+export const motivationalSentences = [
     "Believe in yourself.",
     "Keep pushing forward.",
     "Success is a journey, not a destination.",

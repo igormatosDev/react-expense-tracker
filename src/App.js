@@ -1,23 +1,31 @@
 import './App.css';
-import { Header } from './components/Header'
-import { Balance } from './components/Balance'
-import { IncomeExpenses } from './components/IncomeExpenses'
-import { TransactionList } from './components/TransactionList'
-import { AddTransaction } from './components/AddTransaction'
 
 import { GlobalProvider } from './context/GlobalState'
+
+import GoBack from './components/GoBack';
+
+import Home from './pages/Home';
+import ExpenseTracker from './pages/ExpenseTracker';
+import WordFilter from './pages/WordFilter';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 function App() {
   return (
     <GlobalProvider>
-      <Header />
-      <div className="container">
-        <Balance/>
-        <IncomeExpenses/>
-        <TransactionList/>
-        <AddTransaction/>
-      </div>
+
+      <BrowserRouter>
+        <div className="container">
+          <GoBack/>
+          <Routes>
+            <Route path='/' Component={Home}/>
+            <Route path='/expense-tracker' Component={ExpenseTracker}/>
+            <Route path='/word-filter' Component={WordFilter}/>
+          </Routes>
+        </div>
+
+      </BrowserRouter>
     </GlobalProvider>
   );
 }

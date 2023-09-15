@@ -9,7 +9,8 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: #120e2a;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,7 +95,7 @@ select {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background: linear-gradient(90deg, #5a40cb, #2f265b);
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -106,7 +107,7 @@ select {
 }
 .btn-default{
   cursor: pointer;
-  background-color: #9c88ff;
+  background: linear-gradient(90deg, #5a40cb, #2f265b);
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -173,7 +174,7 @@ select {
   gap: 8px;
   vertical-align: middle;
   align-items: center;
-  color: black;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -181,14 +182,16 @@ select {
   width: 30px;
 }
 
-.home__list > li{
-  color: black;
+.home__list > li,
+  .home__list > li a{
+  color: #fff;
   font-size: 20px;
   margin-bottom: 15px;
 }
 
 .textblock{
-  border-right: 5px solid #eee;
+  border-left: 5px solid #eee;
+  border-radius: 5px;
 
   background-color: #fff;
   box-shadow: var(--box-shadow);
@@ -229,10 +232,29 @@ select {
   align-items: flex-end
 }
 
+@keyframes barHeightAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: inherit;
+  }
+}
 
 .barsorting__bar{
   background: linear-gradient(180deg, #5a40cb, #1c1441);
   width: 100%;
   border: solid 2px #5a40cb57;
-  transition: all 2s;
+  height: 0;
+  transition: height 1s ease-in-out;
+  color: #a792b6;
+  text-align: center;
+  padding-top: 5px
+
 }
+
+.barsorting__bar.barsorting__active{
+  background: linear-gradient(180deg, #cb405f, #2f0710);
+  border: solid 2px #cb405f57;
+}
+

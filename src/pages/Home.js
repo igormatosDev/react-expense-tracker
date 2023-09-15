@@ -9,6 +9,9 @@ const pages = [{
 }, {
     'name': 'Word filter',
     'url': 'word-filter/',
+}, {
+    'name': 'Bar sorting',
+    'url': 'bar-sorting/',
 },]
 
 const Home = () => {
@@ -17,7 +20,7 @@ const Home = () => {
             <h1>Home</h1>
             <ul className="home__list">
                 {pages.map((page) => {
-                    return <li><a href={page.url}>{page.name}</a></li>
+                    return <li key={page.url}><a href={page.url}>{page.name}</a></li>
                 })}
             </ul>
         </>

@@ -18,10 +18,9 @@ const WordFilterForm = () => {
           id: parseInt(Math.random() * 10000000),
           color: getRandomColor(),
           message: sentence,
-          sort: Math.random(),
         };
       })
-      .sort((a, b) => a.sort - b.sort);
+      .sort((a, b) => a.id - b.id);
 
     setSentences(s);
   }, []);
@@ -47,7 +46,7 @@ const WordFilterForm = () => {
             sentence.message.toLowerCase().indexOf(search.toLowerCase()) !== -1
           );
         })
-        .sort((a, b) => a.sort - b.sort)
+        .sort((a, b) => a.id - b.id)
         .map((sentence) => {
           return (
             <TextBlock

@@ -81,7 +81,10 @@ label {
   display: inline-block;
   margin: 10px 0;
 }
-
+input:disabled{
+  background-color: #b8b7c0;
+  border-color: #a1a0a9 !important;
+}
 input[type='text'],
 input[type='number'],
 select {

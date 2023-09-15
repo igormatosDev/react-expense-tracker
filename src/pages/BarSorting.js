@@ -266,6 +266,7 @@ const BarSorting = () => {
         <RainbowSubHeader key="head" title="Bar sorter App" />
         <div className="barsorting__form">
           <input
+            disabled={sortingInProgress}
             type="number"
             name="count"
             min="1"
@@ -277,6 +278,7 @@ const BarSorting = () => {
             }}
           />
           <select
+            disabled={sortingInProgress}
             name="sort_type"
             onChange={(e) => setSortType(e.target.value)}
           >
@@ -289,6 +291,7 @@ const BarSorting = () => {
           </select>
 
           <select
+            disabled={sortingInProgress}
             name="sort_speed"
             onChange={(e) => setSortSpeed(e.target.value)}
           >
@@ -298,8 +301,9 @@ const BarSorting = () => {
             <option value="100">10x</option>
           </select>
 
-          <button className="btn-default" onClick={handlePlay}>
-            Play
+          <button
+            disabled={sortingInProgress} className="btn-default" onClick={handlePlay}>
+            {sortingInProgress ? "Sorting..." : "Play"}
           </button>
         </div>
 

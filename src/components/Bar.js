@@ -1,5 +1,4 @@
 import React from "react";
-import { keyframes } from "styled-components";
 
 const Bar = (props) => {
   var height = parseInt(100 / props.len) * props.number;
